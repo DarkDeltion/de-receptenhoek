@@ -1,0 +1,36 @@
+version: "3.9"
+services: 
+  # apache webserver
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # map volumes
+      - ./htdocs:/var/www/html
+    ports:
+      - 8080:80 # Map host port 8080 to container port 80
+    networks:
+      - phpLocalNetwork
+  # mariadb server
+  mariadb:
+    image: mariadb
+    environment:
+      # database en root password
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: De_receptenhoek_DB
+    ports:
+      - 3306:3306
+    networks:
+      - phpLocalNetwork
+  # phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mariadb:db
+    ports:
+     - 8081:80 # Map host port 8081 to container port 80
+    networks:
+      - phpLocalNetwork
+networks:
+  phpLocalNetwork:

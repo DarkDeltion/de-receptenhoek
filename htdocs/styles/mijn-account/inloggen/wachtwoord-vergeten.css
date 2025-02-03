@@ -1,0 +1,264 @@
+html, body {
+    height: auto;
+    background: linear-gradient(
+        to bottom, 
+        #ffffff 0%, 
+        #d5d9de 5%, 
+        #abb3bc 10%, 
+        #96a1ac 15%, 
+        #818e9b 20%, 
+        #778493 25%, 
+        #6C7B8B 30%, 
+        #677686 35%, 
+        #627182 40%, 
+        #5f6f80 45%, 
+        #5c6d7e 50%, 
+        #5b6c7d 55%, 
+        #5a6a7c 60%, 
+        #596a7c 65%, 
+        #58697b 70%, 
+        #58697b 75%, 
+        #58697b 80%, 
+        #57687a 85%, 
+        #57687a 90%, 
+        #57687a 95%, 
+        #57687a 100%
+    ) 0% 275px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+section {
+    height: 100vh;
+}
+
+/* Navigation Bar Style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #87a9ba;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.nav-buttons, .nav-account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-button i.icon {
+    font-size: 18px;
+}
+
+.nav-button:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 37.5%;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Dropdown Container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Positioned below the button */
+    left: 0;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    min-width: 150px;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+/* --------------------------------------------------------------- */
+
+/* login-box */
+
+/* Center the login box */
+.login-box {
+    background-color: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 27.5vh;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Title styling */
+.login-box h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 24px;
+}
+
+/* Input fields */
+.email-input input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #a4b8c4;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Placeholder text */
+input::placeholder {
+    color: white;
+}
+
+/* Submit button */
+.input input[type="submit"] {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.input input[type="submit"]:hover {
+    background-color: #ff4f4f;
+}
+
+/* Forgot password & Register links */
+.login-box a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* --------------------------------------------------------------- */
+
+/* Footer */
+
+/* Full-width section styling */
+.recipe-section {
+    width: 100%;
+    color: #fff; /* Adjust text color to match */
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 5%;
+    box-sizing: border-box;
+    margin-top: 150px;
+  }
+  
+  /* Styling each column */
+  .recipe-column {
+    flex: 1;
+    margin: 0 15px; /* Space between columns */
+    display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text within the columns */
+  }
+  
+  .recipe-column h3, .recipe-column h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .recipe-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .recipe-column li {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .recipe-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .recipe-column {
+      margin: 15px 0;
+    }
+  }
+  
