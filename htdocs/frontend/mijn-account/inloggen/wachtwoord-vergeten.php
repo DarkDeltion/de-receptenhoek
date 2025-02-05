@@ -28,7 +28,7 @@
         <div class="login-box">
             <h2>wachtwoord vergeten</h2>
             
-            <form action="" method="post">
+            <form action="../../../backend/accounts/wachtwoord-vergeten.php" method="post">
                 <div class="email-input">
                 <input type="email" id="email" name="email" placeholder="E-mail" required><br>
                 </div>

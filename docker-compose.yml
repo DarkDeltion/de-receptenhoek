@@ -1,36 +1,49 @@
-version: "3.9"
 services: 
-  # apache webserver
+  # Apache webserver
   apache:
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      # map volumes
       - ./htdocs:/var/www/html
     ports:
-      - 8080:80 # Map host port 8080 to container port 80
+      - 8080:80  # Map host port 8080 naar container port 80
     networks:
       - phpLocalNetwork
-  # mariadb server
+    depends_on:
+      - mariadb
+      - mailhog
+
+  # MariaDB server
   mariadb:
     image: mariadb
     environment:
-      # database en root password
       MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: De_receptenhoek_DB
     ports:
       - 3306:3306
     networks:
       - phpLocalNetwork
-  # phpmyadmin
+
+  # phpMyAdmin
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    links:
-      - mariadb:db
+    environment:
+      PMA_HOST: mariadb
     ports:
-     - 8081:80 # Map host port 8081 to container port 80
+      - 8081:80  # Map host port 8081 naar container port 80
     networks:
       - phpLocalNetwork
+
+  # MailHog (SMTP server en webinterface)
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025  # SMTP poort voor het verzenden van test e-mails
+      - 8025:8025  # Webinterface voor MailHog
+    networks:
+      - phpLocalNetwork
+
 networks:
   phpLocalNetwork:
+    driver: bridge

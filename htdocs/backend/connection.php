@@ -9,7 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Controleer de verbinding
 if ($conn->connect_error) {
-    echo "<script>console.log('Connection failed: " . $conn->connect_error . "');</script>"; // Log to console
+    echo "< 'Connection failed: " . $conn->connect_error . "');</script>"; // Log to console
 } else {
     echo "<script>console.log('Connected successfully');</script>"; // Log to console
 }

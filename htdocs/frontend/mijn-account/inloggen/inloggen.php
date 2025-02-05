@@ -26,9 +26,10 @@
         </header>
 
         <div class="login-box">
+            <div id="message" style="display: none; color: red;"></div>
             <h2>inloggen</h2>
             
-            <form action="" method="post">
+            <form action="../../../backend/accounts/inloggen.php" method="post">
                 <div class="username-input">
                     <input type="text" id="username" name="username" placeholder="Username" required><br>
                 </div>
@@ -37,7 +38,7 @@
                 </div>
                 <div class="links">
                     <a href="./wachtwoord-vergeten.php">wachtwoord vergeten</a>
-                    <a href="./regristreren.php">Registreren</a>
+                    <a href="./registreren.php">Registreren</a>
                 </div>
                 <div class="input">
                     <input type="submit" name="submit" value="submit">
@@ -48,5 +49,6 @@
     </section>
     <script src="https://kit.fontawesome.com/edd30990f4.js" crossorigin="anonymous"></script>
     <script src="../../../styles/javascript/accountdrop.js"></script>
+    <script src="../../../styles/javascript/account-popup.js"></script>
 </body>
 </html>
