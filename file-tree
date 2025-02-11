@@ -1,0 +1,31 @@
+HTdocs/
+├── backend/
+│   ├── accounts/
+│   │   ├── inloggen.php
+│   │   ├── registreren.php
+│   │   ├── wachtwoord-vergeten.php
+│   └── connection.php
+├── frontend/
+│   ├── mijn-account/
+│   │   ├── favorieten/
+│   │   ├── inloggen/
+│   │   │   ├── inloggen.php
+│   │   │   ├── registreren.php
+│   │   │   └── wachtwoord-vergeten.php
+│   │   └── usersettings/
+├── styles/
+│   ├── images/
+│   │   ├── png.png
+│   │   ├── Untitled.png
+│   │   └── Untitled(1).png
+│   ├── javascript/
+│   │   └── accountdrop.js
+│   ├── mijn-account/
+│   │   ├── favorieten/
+│   │   ├── inloggen/
+│   │   │   ├── inloggen.css
+│   │   │   ├── registreren.css
+│   │   │   └── wachtwoord-vergeten.css
+│   │   └── usersettings/
+│   ├── index.css
+├── index.php

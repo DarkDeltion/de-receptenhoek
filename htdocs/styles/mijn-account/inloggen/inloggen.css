@@ -262,3 +262,19 @@ input::placeholder {
     }
   }
   
+#message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.success {
+    background-color: #d4edda; /* Green background for success */
+    border: 1px solid #c3e6cb;
+    color: green;
+}
+.error {
+    background-color: #f8d7da; /* Red background for error */
+    border: 1px solid #f5c6cb;
+    color: red;
+}

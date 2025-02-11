@@ -1,18 +1,18 @@
 <?php
-$servername = "mariadb"; // In plaats van "localhost"
+$servername = "mariadb"; // Use your actual server name
 $username = "root";
 $password = "admin";
 $dbname = "De_receptenhoek_DB";
 
-// Maak verbinding
+// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Controleer de verbinding
+// Check connection
 if ($conn->connect_error) {
-    echo "< 'Connection failed: " . $conn->connect_error . "');</script>"; // Log to console
+    // Log error to console and stop script execution
+    echo "<script>console.error('Connection failed: " . $conn->connect_error . "');</script>";
+    die("Connection failed: " . $conn->connect_error);
 } else {
-    echo "<script>console.log('Connected successfully');</script>"; // Log to console
+    echo "<script>console.log('Connected successfully');</script>";
 }
-
-$conn->close();
 ?>

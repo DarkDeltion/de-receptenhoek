@@ -1,5 +1,6 @@
 <?php
 include("./backend/connection.php");
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,22 +14,27 @@ include("./backend/connection.php");
 <body>
     <!-- section 1  -->
     <section>
-    <header class="navbar">
-        <div class="nav-buttons">
-            <a class="nav-button" href="./home.php"><i class="fa-solid fa-house"></i> Home</a>
-            <a class="nav-button" href="#recipes"><i class="fa-solid fa-book-open"></i> Recepten</a>
-        </div>
-        <div class="nav-title">De ReceptenHoek</div>
-        
-        <div class="dropdown-container">
-            <button id="dropdownButton" class="dropdown-button">Mijn account <i class="fa-solid fa-arrow-down"></i></button>
-            <div id="dropdownMenu" class="dropdown-menu">
-                <a href="#user-settings" class="dropdown-item">User Settings</a>
-                <a href="#favorieten" class="dropdown-item">Favorieten</a>
-                <a href="./frontend/mijn-account/inloggen/inloggen.php" class="dropdown-item">inloggen</a>
+        <header class="navbar">
+            <div class="nav-buttons">
+                <a class="nav-button" href="../../../index.php"><i class="fa-solid fa-house"></i> Home</a>
+                <a class="nav-button" href="#recipes"><i class="fa-solid fa-book-open"></i> Recepten</a>
             </div>
-        </div>
-    </header>
+            <div class="nav-title">De ReceptenHoek</div>
+
+            <div class="dropdown-container">
+                <button id="dropdownButton" class="dropdown-button">Mijn account <i class="fa-solid fa-arrow-down"></i></button>
+                <div id="dropdownMenu" class="dropdown-menu">
+                    <a href="#user-settings" class="dropdown-item">User  Settings</a>
+                    <a href="#favorieten" class="dropdown-item">Favorieten</a>
+                    <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']): ?>
+                        <a href="./backend/accounts/uitloggen.php" class="dropdown-item">Uitloggen</a> <!-- Show Uitloggen if logged in -->
+                    <?php else: ?>
+                        <a href="./frontend/mijn-account/inloggen/inloggen.php" class="dropdown-item">Inloggen</a> <!-- Show Inloggen if not logged in -->
+                    <?php endif; ?>
+                </div>
+            </div>
+        </header>
+
 
     <div class="search-bar">
         <img src="./styles/images/Untitled.png" alt="Background Image">

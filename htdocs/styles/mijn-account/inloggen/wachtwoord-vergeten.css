@@ -126,11 +126,8 @@ section {
 
 /* Dropdown Items */
 .dropdown-item {
-    padding: 10px 15px;
-    color: black;
-    text-decoration: none;
+    padding: 10px 15px; 
 }
-
 .dropdown-item:hover {
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -261,4 +258,40 @@ input::placeholder {
       margin: 15px 0;
     }
   }
-  
+      /* Stijl voor de modale pop-up-overlay */
+      #popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+      }
+      /* De inhoud van de modal */
+      #modalContent {
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        min-width: 300px;
+        max-width: 90%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+      /* Algemene styling voor de boodschap in de modal */
+      #popupMessage {
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+      /* Standaard knopstijl */
+      #closeButton {
+        padding: 10px 20px;
+        border: none;
+        background-color: #333;
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+      }
